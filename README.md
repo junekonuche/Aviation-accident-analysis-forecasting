@@ -3,7 +3,6 @@ An Advanced Machine Learning project that analyzes historical aviation accident 
 
 
 
-# Aviation Accident Analysis and Forecasting
 
 ## Overview
 
