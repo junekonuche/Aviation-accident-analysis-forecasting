@@ -1,245 +1,188 @@
-# Aviation-accident-analysis-forecasting
-An Advanced Machine Learning project that analyzes historical aviation accident data from the NTSB to identify accident patterns, predict accident severity, and forecast future aviation accident trends using machine learning and time-series forecasting models.
+# Aviation Accident Analysis and Forecasting
 
+## Project Overview
 
+This project analyzes historical aviation accident records to identify factors associated with fatal injuries and forecast future aviation fatality trends. Using machine learning regression models and time-series forecasting techniques, the project aims to provide insights into aviation safety and accident outcomes.
 
-
-## Overview
-
-Aviation safety remains a critical concern worldwide, making the analysis of accident patterns and trends essential for improving operational safety and risk management. This project applies machine learning and time-series forecasting techniques to historical aviation accident data from the National Transportation Safety Board (NTSB) to uncover accident patterns, predict accident severity, and forecast future accident trends.
-
-The project combines exploratory data analysis, predictive modeling, and forecasting methods to generate actionable insights from aviation accident records.
+The study leverages accident, aircraft, operational, and environmental information to understand the factors that contribute to fatalities and to estimate future fatality patterns.
 
 ---
 
 ## Problem Statement
 
-Understanding the factors associated with aviation accidents is essential for improving safety and reducing future risks. However, the increasing volume of historical accident records makes manual analysis challenging.
+Aviation accidents continue to be a major concern for aviation authorities, airlines, manufacturers, and safety investigators. Understanding the factors that influence accident fatalities and anticipating future fatality trends can support data-driven safety improvements.
 
-This project aims to leverage machine learning and forecasting techniques to:
+This project seeks to answer the following questions:
 
-* Identify patterns and trends in aviation accident data.
-* Predict accident severity using operational and environmental factors.
-* Forecast future accident trends based on historical records.
-* Generate insights that support aviation risk analysis and decision-making.
+- Which factors contribute most to aviation fatalities?
+- Can machine learning models predict the number of fatal injuries in an accident?
+- How have aviation fatalities changed over time?
+- Can future fatality trends be forecast using historical accident data?
 
 ---
 
-## Objectives
+## Project Objectives
 
-### Main Objectives
+### Main Objective
 
-1. Analyze historical aviation accident records.
-2. Identify key factors associated with accident severity.
-3. Build classification models to predict accident severity.
-4. Compare the performance of multiple machine learning models.
-5. Forecast future aviation accident trends using time-series techniques.
-6. Generate data-driven insights through visualizations and model interpretation.
+To analyze aviation accident data and develop machine learning and forecasting models that predict aviation fatalities and forecast future fatality trends.
+
+### Specific Objectives
+
+- Explore and understand historical aviation accident data.
+- Identify patterns and trends associated with fatal injuries.
+- Analyze the impact of aircraft, weather, and operational factors on fatalities.
+- Develop regression models for fatality prediction.
+- Compare the performance of multiple machine learning algorithms.
+- Forecast future aviation fatality trends using time-series models.
+- Generate insights that support aviation safety analysis.
 
 ---
 
 ## Dataset
 
-This project uses the NTSB Aviation Accidents Dataset available on Kaggle.
+This project uses aviation accident records containing information such as:
 
-Dataset Source:
-https://www.kaggle.com/datasets/mirzaniazmorshed/ntsb-aviation-accidents/data
+- Aircraft manufacturer
+- Aircraft model
+- Aircraft category
+- Engine type
+- Weather conditions
+- Flight phase
+- Aircraft damage
+- Operational characteristics
+- Fatal injuries
+- Serious injuries
+- Accident dates
 
-Original Source:
-National Transportation Safety Board (NTSB) Aviation Accident Database.
+### Primary Target Variable
 
-### Dataset Features
-
-The dataset contains information related to:
-
-* Aircraft manufacturer
-* Aircraft model
-* Aircraft category
-* Weather conditions
-* Flight phase
-* Injury severity
-* Aircraft damage level
-* Accident location
-* Accident date
-* Flight operation details
-* Probable causes
-
-The dataset includes multiple related tables linked through a unique event identifier.
+**inj_tot_f** – Total Fatal Injuries
 
 ---
 
-## Project Workflow
+## Machine Learning Task
 
-### 1. Data Collection
+### Regression
 
-* Load aviation accident datasets.
-* Merge relevant tables.
-* Inspect data structure and quality.
+The regression component predicts the number of fatal injuries resulting from an aviation accident.
 
-### 2. Data Cleaning and Preprocessing
+### Models
 
-* Handle missing values.
-* Remove duplicates.
-* Encode categorical variables.
-* Prepare features for machine learning models.
+- Linear Regression
+- Random Forest Regressor
+- Gradient Boosting Regressor
+- XGBoost Regressor
+- TensorFlow MLP Regressor
 
-### 3. Exploratory Data Analysis (EDA)
+### Evaluation Metrics
 
-* Accident distribution over time.
-* Accident severity trends.
-* Aircraft manufacturer analysis.
-* Flight phase analysis.
-* Weather condition analysis.
-* Geographic accident patterns.
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- R² Score
 
-### 4. Feature Engineering
+---
 
-* Create derived features.
-* Encode categorical variables.
-* Select relevant predictors.
+## Time-Series Forecasting
 
-### 5. Classification Modeling
+The forecasting component analyzes fatal injury trends over time and predicts future fatality patterns.
 
-Build models to predict accident severity using:
+### Forecasting Models
 
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* Gradient Boosting
-* XGBoost
+- ARIMA
+- SARIMA
+- Prophet
+- LSTM (Optional)
 
-### 6. Time-Series Forecasting
+### Evaluation Metrics
 
-Forecast future aviation accident trends using:
+- MAE
+- RMSE
+- MAPE
 
-* ARIMA
-* SARIMA
-* Prophet
+---
 
-### 7. Model Evaluation
+## Exploratory Data Analysis
 
-#### Classification Metrics
+The project investigates:
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-* ROC-AUC
-
-#### Forecasting Metrics
-
-* MAE
-* RMSE
-* MAPE
-
-### 8. Results and Insights
-
-* Model comparison.
-* Important risk factors.
-* Accident trend forecasts.
-* Aviation safety insights.
+- Fatal injuries by aircraft manufacturer
+- Fatal injuries by aircraft model
+- Fatal injuries by weather condition
+- Fatal injuries by flight phase
+- Fatal injuries by aircraft damage level
+- Fatality trends over time
+- Seasonal accident patterns
+- Correlation analysis
 
 ---
 
 ## Technologies Used
 
-### Programming Language
-
-* Python
-
-### Data Analysis
-
-* Pandas
-* NumPy
-
-### Visualization
-
-* Matplotlib
-* Seaborn
-
-### Machine Learning
-
-* Scikit-learn
-* XGBoost
-
-### Time-Series Forecasting
-
-* Statsmodels
-* Prophet
-
-### Development Environment
-
-* Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- TensorFlow
+- Statsmodels
+- Prophet
+- Jupyter Notebook
 
 ---
 
-## Skills Demonstrated
+## Project Structure
 
-* Data Cleaning
-* Exploratory Data Analysis
-* Feature Engineering
-* Classification Modeling
-* Ensemble Learning
-* Hyperparameter Tuning
-* Time-Series Forecasting
-* Model Evaluation
-* Data Visualization
-* Model Interpretation
+```text
+Aviation-accident-analysis-forecasting/
+│
+├── data/
+│   └── merged_air_crash_data.csv
+│
+├── notebooks/
+│   └── Aviation_Accident_Analysis_and_Forecasting.ipynb
+│
+├── images/
+│   └── visualizations/
+│
+├── requirements.txt
+│
+├── README.md
+│
+└── LICENSE
+```
 
 ---
 
 ## Expected Outcomes
 
-This project is expected to:
-
-* Identify significant factors associated with aviation accident severity.
-* Provide accurate accident severity predictions using machine learning models.
-* Forecast future aviation accident trends using historical data.
-* Generate insights that contribute to understanding aviation accident patterns.
+- Identification of key factors associated with aviation fatalities.
+- Accurate regression models for fatality prediction.
+- Forecasts of future aviation fatality trends.
+- Actionable aviation safety insights based on historical accident data.
 
 ---
 
-## Repository Structure
+## Skills Demonstrated
 
-aviation-accident-analysis-forecasting/
-
-├── data/
-
-│   ├── raw/
-
-│   └── processed/
-
-├── notebooks/
-
-│   ├── 01_data_cleaning.ipynb
-
-│   ├── 02_eda.ipynb
-
-│   ├── 03_feature_engineering.ipynb
-
-│   ├── 04_classification_models.ipynb
-
-│   ├── 05_forecasting_models.ipynb
-
-│   └── 06_model_evaluation.ipynb
-
-├── reports/
-
-│   ├── figures/
-
-│   └── project_report.pdf
-
-├── models/
-
-├── README.md
-
-└── requirements.txt
+- Data Cleaning and Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Regression Modeling
+- Neural Networks with TensorFlow
+- Time-Series Forecasting
+- Model Evaluation and Comparison
+- Data Visualization
+- Aviation Safety Analytics
 
 ---
 
 ## Author
 
-Advanced Machine Learning Capstone Project
+**June Konuche**
 
-Bachelor of Science in Mathematics and Computer Science
+BSc Mathematics and Computer Science
+
+Data Science | Machine Learning | Aviation Analytics
