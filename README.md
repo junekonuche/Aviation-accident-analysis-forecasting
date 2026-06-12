@@ -183,6 +183,8 @@ Aviation-accident-analysis-forecasting/
 
 **June Konuche**
 
+Link to the website - https://aero-safeguard.lovable.app/#home
+
 BSc Mathematics and Computer Science
 
 Data Science | Machine Learning | Aviation Analytics
